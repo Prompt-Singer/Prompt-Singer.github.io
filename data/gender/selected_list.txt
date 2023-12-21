@@ -1,0 +1,4 @@
+0514#女_2_3-拥有#0004_wf0_16k: female: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_female_Pitch_high/syn/0514#女_2_3-拥有#0004_wf0_16k.wav male: t5_nodrop_male_pitch_high
+Alto-6#父亲#0009: male: flant5t2t_nodrop/generate-Gender_male_vt female: bert_classfinetuned/generate-Gender_female_Pitch_low/
+3 female: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_female_Pitch_low/syn/1011#2-6_0641_年少有为_张倬菡#0005_wf0_16k.wav male: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_male_vt/syn/1011#2-6_0641_年少有为_张倬菡#0005_wf0_16k.wav
+male: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_male_Pitch_low/syn/popcs-哭砂#0016.wav female: /root/autodl-tmp/Huruofan/Data/PromptSing/flan_t5_finetuned/generate-Gender_female_vt/syn/popcs-哭砂#0016.wav
