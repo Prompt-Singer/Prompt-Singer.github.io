@@ -1,0 +1,17 @@
+Tenor-7#袖手旁观#0016.wav：
+male_low: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_male_Pitch_low/syn/Tenor-7#袖手旁观#0016.wav
+male_high: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_male_vt/syn/Tenor-7#袖手旁观#0016.wav
+
+1022#2-6_1126_光_小陈#0002_wf0_16k
+male_low: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_male_Pitch_low/syn/1022#2-6_1126_光_小陈#0002_wf0_16k.wav
+male_high: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_male_vt/syn/1022#2-6_1126_光_小陈#0002_wf0_16k.wav
+
+0514#女_2_3-演员#0006_wf0_16k: 
+female_high:/root/autodl-tmp/Huruofan/Data/PromptSing/flan_t5_finetuned/generate-Gender_female_Pitch_high/syn/0514#女_2_3-演员#0006_wf0_16k.wav
+female_low: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_female_Pitch_low/syn/0514#女_2_3-演员#0006_wf0_16k.wav
+
+female_low: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_female_Pitch_low/syn/Tenor-4#葬花吟#0001.wav
+female_high: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_female_Pitch_high/syn/Tenor-4#葬花吟#0001.wav
+
+male_high: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_male_Pitch_high/syn/Alto-5#明明就#0010.wav
+male_low: /root/autodl-tmp/Huruofan/Data/PromptSing/flant5t2t_nodrop/generate-Gender_male_Pitch_low/syn/Alto-5#明明就#0010.wav
