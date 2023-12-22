@@ -72,9 +72,10 @@
     <h2 id="tablecontents" style="text-align: left;">Table of Contents</h2>
     <div>
         <li><a href="#gender" class="btn border-white bg-white fw-bold">Singer Gender Control</a></li>
+        <li><a href="#pitch" class="btn border-white bg-white fw-bold">Vocal Range Control</a></li>
         <li><a href="#volume" class="btn border-white bg-white fw-bold">Volume Control</a></li>
-        <li><a href="#volume" class="btn border-white bg-white fw-bold">Vocal Range Control</a></li>
         <li><a href="#volume" class="btn border-white bg-white fw-bold">Multi-Attribute Control</a></li>
+        <li><a href="#volume" class="btn border-white bg-white fw-bold">Low-Resource Results</a></li>
     </div>
   </div>
 
@@ -201,8 +202,129 @@
   </div>
 
   <div class="container shadow p-5 mb-5 bg-white rounded">
-    <h3>Demo Page Under Construction...<a id="volume" /></h3>
+    <h3>Vocal Range Control<a id="pitch" /></h3>
 
+    <p style="margin-top: 2em">
+      In this section, we provide results of prompted control over the vocal range. The results are from Prompt-Singer with finetuned FLAN-T5 large text encoder.
+    </p>
+    <div class="container pt-3 table-responsive">
+      <table id="pitch_gt_1">
+        <tr height=100px>
+          <td colspan="3" style="text-align: center"><b>Lyrics:</b> 快乐缺点勇气，浪漫缺点诗意，沉默一句一句都是谜题 &nbsp &nbsp <b>Reference Singing:</b> &nbsp <audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/1_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+      </tr>
+      </table>
+      <table class="table table-hover" id="pitch_table_1">
+        <thead>
+          <tr>
+            <th style="text-align: center">Label</th>
+            <th style="text-align: center">Prompt</th>
+            <th style="text-align: center">Generated Singing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr height=100px>
+            <td style="text-align: center">Low (male)</td>
+            <td style="text-align: center">Can you generate a guy singer's song with a deep pitch?</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/1_low.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">High (male)</td>
+            <td style="text-align: center">Compose a man artist's song with a captivating high pitch.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/1_high.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp</p>
+
+      <table id="pitch_gt_2">
+        <tr height=100px>
+          <td colspan="3" style="text-align: center"><b>Lyrics:</b> 中古世纪的城市里，我想就走到这 &nbsp &nbsp <b>Reference Singing:</b> &nbsp <audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/2_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+      </tr>
+      </table>
+      <table class="table table-hover" id="pitch_table_2">
+        <thead>
+          <tr>
+            <th style="text-align: center">Label</th>
+            <th style="text-align: center">Prompt</th>
+            <th style="text-align: center">Generated Singing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr height=100px>
+            <td style="text-align: center">Low (male)</td>
+            <td style="text-align: center">Create a song with a bass pitch and man vocals.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/2_low.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">High (male)</td>
+            <td style="text-align: center">Design a boy voice's song with sharp harmony.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/2_high.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp</p>
+
+      <table id="pitch_gt_3">
+        <tr height=100px>
+          <td colspan="3" style="text-align: center"><b>Lyrics:</b> 红消香断 &nbsp &nbsp <b>Reference Singing:</b> &nbsp <audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/3_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+      </tr>
+      </table>
+      
+      <table class="table table-hover" id="pitch_table_3">
+        <thead>
+          <tr>
+            <th style="text-align: center">Label</th>
+            <th style="text-align: center">Prompt</th>
+            <th style="text-align: center">Generated Singing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr height=100px>
+            <td style="text-align: center">Low (female)</td>
+            <td style="text-align: center">Compose a deep pitch song with a female lead singer.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/3_low.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">High (female)</td>
+            <td style="text-align: center">Can you create a song with a girl voice and shrieking note?</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/3_high.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp</p>
+
+      <table id="pitch_gt_4">
+        <tr height=100px>
+          <td colspan="3" style="text-align: center"><b>Lyrics:</b> 才是考验，没意见你想怎样我都随便 &nbsp &nbsp <b>Reference Singing:</b> &nbsp <audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/4_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+      </tr>
+      </table>
+      <table class="table table-hover" id="pitch_table_4">
+        <thead>
+          <tr>
+            <th style="text-align: center">Label</th>
+            <th style="text-align: center">Prompt</th>
+            <th style="text-align: center">Generated Singing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr height=100px>
+            <td style="text-align: center">Low (female)</td>
+            <td style="text-align: center">Can you generate a miss singer's song with a low pitch?</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/4_low.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">High (female)</td>
+            <td style="text-align: center">Design high-pitched harmonies with a woman vocalist.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/pitch/4_high.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+    <h2 id="tablecontents" style="text-align: left;">Demo Page Under Construction.<a id="volume" /></h2>
   </div>
 
 </body>
