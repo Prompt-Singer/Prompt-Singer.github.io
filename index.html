@@ -74,7 +74,7 @@
         <li><a href="#gender" class="btn border-white bg-white fw-bold">Singer Gender Control</a></li>
         <li><a href="#pitch" class="btn border-white bg-white fw-bold">Vocal Range Control</a></li>
         <li><a href="#volume" class="btn border-white bg-white fw-bold">Volume Control</a></li>
-        <li><a href="#lowresource" class="btn border-white bg-white fw-bold">Multi-Attribute Control</a></li>
+        <li><a href="#multiple" class="btn border-white bg-white fw-bold">Multi-Attribute Control</a></li>
         <li><a href="#lowresource" class="btn border-white bg-white fw-bold">Low-Resource Results</a></li>
     </div>
   </div>
@@ -83,7 +83,7 @@
     <h3>Singer Gender Control<a id="gender" /></h3>
 
     <p style="margin-top: 2em">
-      In this section, we provide results of prompted control over the singer gender. The results are from Prompt-Singer with finetuned FLAN-T5 large text encoder.
+      In this section, we provide samples of prompted control over the singer gender. The results are from Prompt-Singer with finetuned FLAN-T5 large text encoder.
     </p>
     <div class="container pt-3 table-responsive">
       <table id="gender_gt_1">
@@ -205,7 +205,7 @@
     <h3>Vocal Range Control<a id="pitch" /></h3>
 
     <p style="margin-top: 2em">
-      In this section, we provide results of prompted control over the vocal range. The results are from Prompt-Singer with finetuned FLAN-T5 large text encoder.
+      In this section, we provide samples of prompted control over the vocal range. The results are from Prompt-Singer with finetuned FLAN-T5 large text encoder.
     </p>
     <div class="container pt-3 table-responsive">
       <table id="pitch_gt_1">
@@ -327,7 +327,7 @@
     <h3>Volume Control<a id="volume" /></h3>
 
     <p style="margin-top: 2em">
-      In this section, we provide results of prompted control over the volume. The results are from Prompt-Singer with finetuned FLAN-T5 large text encoder.
+      In this section, we provide samples of prompted control over the volume. The results are from Prompt-Singer with finetuned FLAN-T5 large text encoder.
     </p>
     <div class="container pt-3 table-responsive">
       <table id="volume_gt_1">
@@ -431,6 +431,93 @@
 
     </div>
 
+  </div>
+
+  <div class="container shadow p-5 mb-5 bg-white rounded">
+    <h3>Multiple-Attribute Control<a id="multiple" /></h3>
+
+    <p style="margin-top: 2em">
+      In this section, we provide samples of prompted control over multiple attributes. The results are from Prompt-Singer with finetuned FLAN-T5 large text encoder.
+    </p>
+    <div class="container pt-3 table-responsive">
+      <table id="multiple_gt_0">
+        <tr height=100px>
+          <td colspan="3" style="text-align: center"><b>Lyrics:</b> 在世上，命运不能更改 &nbsp &nbsp <b>Reference Singing:</b> &nbsp <audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+      </tr>
+      </table>
+      <table class="table table-hover" id="gender_table_1">
+        <thead>
+          <tr>
+            <th style="text-align: center">Labels</th>
+            <th style="text-align: center">Prompt</th>
+            <th style="text-align: center">Generated Singing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr height=100px>
+            <td style="text-align: center">Female, Low Volume, Low Pitch</td>
+            <td style="text-align: center">Generate a female singer with a whispering voice to compose a song in a low pitch.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_female_low_low.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Female, Low Volume, High Pitch</td>
+            <td style="text-align: center">Can you produce a melody featuring a treble pitch and miss voice with a slight sound?</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_female_low_high.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Female, Medium Volume, Low Pitch</td>
+            <td style="text-align: center">Compose a song with a low-pitched pitch and woman artist featuring a moderate vocal style.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_female_mid_low.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Female, Medium Volume, High Pitch</td>
+            <td style="text-align: center">Can you make a song in a sharp key? Need a miss singer with a moderate voice.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_female_mid_high.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Female, High Volume, Low Pitch</td>
+            <td style="text-align: center">Generate a lady singer's song with a loud voice that thunders, with a bass pitch.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_female_high_low.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Female, High Volume, High Pitch</td>
+            <td style="text-align: center">Create a high-pitched centered song with booming voice and girl singer.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_female_high_high.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Male, Low Volume, Low Pitch</td>
+            <td style="text-align: center">Synthesize a boy singer's song with a whispering sound at thick level.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_male_low_low.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Male, Low Volume, High Pitch</td>
+            <td style="text-align: center">Can you create a song with a twittering voice, and if possible, a man voice, that has a distinctive shrill sound?</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_male_low_high.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Male, Medium Volume, Low Pitch</td>
+            <td style="text-align: center">Create a gentleman singer with moderate vocals and beautiful bass harmonies.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_male_mid_low.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Male, Medium Volume, High Pitch</td>
+            <td style="text-align: center">Generate a sir singer's song with a intermediate voice and shrieking harmony.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_male_mid_high.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Male, High Volume, Low Pitch</td>
+            <td style="text-align: center">Make a thick pitch song by a man singer with a ringing voice.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_male_high_low.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Male, High Volume, High Pitch</td>
+            <td style="text-align: center">Synthesize a song with a unique shrieking tone and a thunderous voice, preferably with a male singer.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/multiple/0_male_high_high.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
   </div>
 
   <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
