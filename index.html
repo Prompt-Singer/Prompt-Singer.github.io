@@ -11,13 +11,14 @@
   <style>
     td {
       vertical-align: middle;
+      min-width: 220px;
     }
 
     audio {
       height: 50px;
       width: 20vw;
-      min-width: 100px;
-      max-width: 250px;
+      min-width: 70px;
+      max-width: 220px;
     }
   </style>
 </head>
@@ -521,7 +522,163 @@
   </div>
 
   <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-    <h2 id="tablecontents" style="text-align: left;">Demo Page Under Construction.<a id="lowresource" /></h2>
+    <h3 id="tablecontents" style="text-align: left;">Low-Resource Results<a id="lowresource" /></h3>
+    <p style="margin-top: 2em">
+      We first provide some samples, where <b>the model incorporating speech data</b> demonstrates <b>superior control capabilities</b>, while <b>the model using solely singing data fails to control attributes</b> or the characteristics are <b>not significant</b>.
+    </p>
+    <div class="container pt-3 table-responsive">
+      <table class="table table-hover" id="lowresource_table1">
+        <thead>
+          <tr>
+            <th style="text-align: center">Labels</th>
+            <th style="text-align: center">Prompt</th>
+            <th style="text-align: center">Speech + Singing</th>
+            <th style="text-align: center">Singing Only</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr height=100px>
+            <td style="text-align: center">Male</td>
+            <td style="text-align: center">Do you have any songs with a male singer?</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/male_speech.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/male_sing.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Female</td>
+            <td style="text-align: center">I'm interested in a song with a woman vocalist.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/female_speech.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/female_sing.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Male, Low Pitch</td>
+            <td style="text-align: center">Design a bass song performed by a guy singer.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/male_low_speech.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/male_low_sing.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Male, High Pitch</td>
+            <td style="text-align: center">Can you generate a guy singer's song with a high pitch?</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/male_high_speech.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/male_high_sing.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Female, Low Pitch</td>
+            <td style="text-align: center">Create a woman vocalist with bass pitch for an emotional song.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/female_low_speech.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/female_low_sing.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center">Female, High Pitch</td>
+            <td style="text-align: center">Synthesize a song with female vocalist and a sharp pitch.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/female_high_speech.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource1/female_high_sing.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+      </table>
+    </div>
+    
+    <p style="margin-top: 2em">
+      Next, we present samples obtained by combining different quantities of low-resource singing data with speech data. Pay attention to the quality and melodic accuracy of the synthesized singing. <b>(You may need to scroll right to see full results.)</b>
+    </p>
+
+    <div class="container pt-3 table-responsive">
+      <table class="table table-hover" id="lowresource_table2">
+        <thead>
+          <tr>
+            <th style="text-align: center">Ref Singing</th>
+            <th style="text-align: center">Labels</th>
+            <th style="text-align: center">Prompt</th>
+            <th style="text-align: center">Singing 10min + Speech 100h</th>
+            <th style="text-align: center">Singing 1h + Speech 100h</th>
+            <th style="text-align: center">Singing 10h + Speech 100h</th>
+            <th style="text-align: center">Singing 100h + Speech 100h</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr height=100px>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center">Female</td>
+            <td style="text-align: center">I need a song with a female lead singer. </td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_10min.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_1h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_10h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_100h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center">Male</td>
+            <td style="text-align: center">I want to listen to a song with a guy voice, if possible. </td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_10min.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_1h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_10h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_100h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_high_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center">Female, High Pitch</td>
+            <td style="text-align: center">Compose a song with a female voice and its unique charm in its treble pitch. </td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_high_10min.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_high_1h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_high_10h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_high_100h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_low_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center">Female, Low Pitch</td>
+            <td style="text-align: center">Creating a song with a lass vocalist and a distinct use of thick pitch.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_low_10min.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_low_1h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_low_10h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/female_low_100h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_high_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center">Male, High Pitch</td>
+            <td style="text-align: center">Can you create a song featuring a man vocalist and emphasizing the shrill note? </td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_high_10min.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_high_1h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_high_10h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_high_100h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_low_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center">Male, Low Pitch</td>
+            <td style="text-align: center">Composing a gentleman singer's song with a deep pitch.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_low_10min.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_low_1h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_low_10h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/male_low_100h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_low_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center">Low Volume</td>
+            <td style="text-align: center">Play me a song with a hushed voice.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_low_10min.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_low_1h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_low_10h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_low_100h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_mid_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center">Medium Volume</td>
+            <td style="text-align: center">I'd like to listen to a song with a moderate voice.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_mid_10min.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_mid_1h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_mid_10h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_mid_100h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr height=100px>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_high_gt.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center">High Volume</td>
+            <td style="text-align: center">Give me a song with a roaring voice.</td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_high_10min.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_high_1h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_high_10h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center"><audio controls controlslist="nodownload" class="px-1"> <source src='data/lowresource2/volume_high_100h.wav' type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+      </table>
+    </div>
+    
+
   </div>
 
 </body>
